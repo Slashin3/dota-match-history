@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const https = require("https");
 const { Client, IntentsBitField } = require("discord.js");
@@ -40,6 +41,4 @@ client.on("messageCreate", (message) => {
   });
 });
 
-client.login(
-  "MTI2NjEzNTI5NzU0MDg4NjY4MA.G4F2u7.5Ygx0Yg9MkvkGJnz1apAFEr4d_HidoTKCtjvGw"
-);
+client.login(process.env.TOKEN);
